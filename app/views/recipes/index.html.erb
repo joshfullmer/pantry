@@ -1,0 +1,8 @@
+<% @recipes.each do |recipe| %>
+<div class="recipe">
+  <p class="name"><%= recipe.name %></p>
+  <p class="time"><%= recipe.created_at %></p>
+  <p><%= link_to 'Show', recipe_path(recipe) %></p>
+</div>
+<% end %>
+<%= link_to 'New Recipe', "recipes/new" %>
